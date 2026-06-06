@@ -8,15 +8,22 @@ body {
 
 #navbar{
     display: flex;
-    text-align: right;
-    justify-content: space-between;
-    position: sticky;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+     
    
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 .nav-links{
     
    display: flex;
     list-style: none;
+   
     
 }
 .nav-links a{
@@ -24,11 +31,20 @@ body {
     text-decoration: none;
     padding: 20px;
     
+    
 }
 .nav-links a:hover{
     color: white;
     background-color: rgba(55, 66, 228, 0.952);
     border-radius: 5px;
+}
+#darkModeBtn{
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    align-items: center;
 }
 
 .name{

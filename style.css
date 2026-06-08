@@ -4,7 +4,25 @@ body {
     font-size: larger;
     
 }
+:root{
+   
+     --primary-color:black;
+    --secondary-color:rgb(39, 47, 47);
+    --tirsory-color:rgb(229, 235, 237);
+    --text-primary:rgb(166, 75, 223);
+    --text-secondary:white;
+    --header-color:rgb(229, 235, 237);
+    
+}
+.dark-mode{
+    --primary-color:white;
+    --secondary-color:rgb(239, 241, 241);
+    --tirsory-color:white;
 
+    --text-primary:rgb(166, 75, 223);
+    --text-secondary:black;
+    --header-color:rgb(16, 32, 37);
+}
 
 #navbar{
     display: flex;
@@ -27,26 +45,39 @@ body {
     
 }
 .nav-links a{
-    color: white;
+    color: var( --primary-color);
     text-decoration: none;
     padding: 20px;
     
     
 }
 .nav-links a:hover{
-    color: white;
+    color:var( --primary-color);
     background-color: rgba(55, 66, 228, 0.952);
     border-radius: 5px;
 }
 #darkModeBtn{
-    background: none;
+    background: transparent;
     border: none;
     font-size: 28px;
     cursor: pointer;
     padding: 0;
     align-items: center;
 }
-
+/* Dark mode */
+.dark-mode #darkModeBtn i{
+    color: white;
+}
+/* Light mode */
+body:not(.dark-mode) #darkModeBtn i{
+    color: black;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    background:transparent;
+    cursor: pointer;
+}
 .name{
     padding-left: 10px;
     font-size: 24px;
@@ -56,15 +87,15 @@ a{
     padding : 5px;
 }
 header {
-    color: white;
-    background-color: rgb(16, 32, 37);
+    color: var( --primary-color);
+    background-color:var(--header-color);
     padding:10px 10px 10px 10px;
     text-align: left;
 
 }
 #about{
     padding: 20px;
-    background-color: rgb(239, 241, 241);
+    background-color: var(--secondary-color);
     
 }
 .about-container{
@@ -74,7 +105,7 @@ header {
      
 }
 .about-container h2{
-    color: rgb(166, 75, 223);
+    color: var(--text-primary);
 }
 .about-image{
   
@@ -91,7 +122,7 @@ header {
     padding: 60px 60px ;
 }
 .about-content p{
-    
+    color: var(--text-secondary);
     word-spacing: 3px;
     line-height: 1.8;
 
@@ -104,12 +135,12 @@ header {
 }
 #skills{
     padding: 20px;
-    
+    background-color: var(--tirsory-color);
     
 }
 #skills h2{
     text-align: center;
-    color: rgb(166, 75, 223);;
+    color: var(--text-primary);
 }
 .skill-pic{
     width: 100px;
@@ -126,7 +157,7 @@ header {
     border:2px solid rgb(129, 124, 124);
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 2px 8px gray;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);;
     
     
 
@@ -139,11 +170,11 @@ header {
 }
 #projects{
     padding: 30px 30px;
-    background-color: rgb(239, 241, 241);
+    background-color: var(--secondary-color);
 }
 #projects h2{
     text-align: center;
-    color: rgb(166, 75, 223);
+    color: var(--text-primary);
 }
 .project-container{
     display: flex;
@@ -158,11 +189,11 @@ header {
     padding: 10px;
     width: 300px;
     overflow: hidden;
-    box-shadow: 0 2px 8px gray;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);;
     
 }
 .project-content h4{
-    color:rgb(166, 75, 223) ;
+    color:var(--text-primary) ;
 }
 .profile-pic{
     object-fit: cover;
@@ -173,6 +204,7 @@ header {
     object-fit: cover;
 }
 .description{
+    color:var(--text-secondary);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -183,11 +215,12 @@ header {
 }
 #contact{
     padding: 20px;
+    background-color: var(--tirsory-color);
     
 }
 #contact h2{
     text-align: center;
-    color:rgb(166, 75, 223) ;
+    color:var(--text-primary) ;
 }
 #contact p{
     text-align: center;
@@ -232,7 +265,7 @@ padding:10px;
 .hero-text button:hover{
     text-decoration: none;
     background-color: rgba(55, 66, 228, 0.952);;
-    color: white;
+    color: var( --primary-color);
 }
 #theme-btn{
     padding: 8px 15px;

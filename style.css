@@ -1,6 +1,6 @@
 body {
     font-family:'Times New Roman', Times, serif;
-    margin: 0;
+    margin: auto;
     font-size: larger;
     
 }
@@ -26,7 +26,7 @@ body {
 
 #navbar{
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content:space-between;
     padding: 10px;
      
@@ -132,6 +132,13 @@ header {
     font-size: 18px;
     line-height: 1.0;
     gap: 30px;
+}
+.about-info h4{
+    color: var(--text-primary);
+}
+
+.about-info p{
+    color: var(--text-secondary);
 }
 #skills{
     padding: 20px;
@@ -271,4 +278,76 @@ padding:10px;
     padding: 8px 15px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+/* Navbar */
+@media (max-width:768px){
+    #navbar{
+        flex-direction: column;
+        
+        text-align:right;
+        gap: 15px;
+    }
+   
+    
+    .nav-right{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-text{
+        padding: 0px;
+    }
+    .hero-image img,
+    .profile-pic{
+        width: 220px;
+        height: 220px;
+    }
+
+     /* About Section */
+    .about-container{
+        flex-direction: column;
+        text-align: center;
+    }
+     .about-content{
+        padding: 20px;
+    }
+
+    .about-info{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-image img{
+        width: 220px;
+        height: 220px;
+    }
+    /* Skills */
+    .content{
+        justify-content: center;
+    }
+
+    /* Projects */
+    .project-container{
+        justify-content: center;
+    }
+
+    .project-content{
+        width: 90%;
+    }
+
+    /* Contact */
+    .info{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }
